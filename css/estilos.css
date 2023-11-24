@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: transparent;
+    position: relative; /* Agregamos posición relativa al header */
+}
+
+header img {
+    width: auto;
+    height: 1em; /* Ajustamos la altura de la imagen para que coincida con el tamaño del texto */
+    object-fit: cover;
+    position: absolute; /* Agregamos posición absoluta para que la imagen no afecte el tamaño del header */
+    top: 50%; /* Posicionamos la imagen en el centro verticalmente */
+    transform: translateY(-50%); /* Corregimos la posición vertical centrando la imagen */
+}
+
+nav {
+    background-color: #d44;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    display: block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: #c00;
+}
+
+section {
+    padding: 2em;
+    display: none;
+}
+
+h2 {
+    color: #c00;
+}
+
+section:target {
+    display: block;
+}
+
+/* Estilos adicionales para la sección de compra */
+section#compra {
+    text-align: center;
+}
+
+section#compra .imagenes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+section#compra .imagenes img {
+    width: 150px;
+    border: 1px solid #ccc;
+}
+
+section#compra button {
+    padding: 10px;
+    background-color: #c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section#compra button:hover {
+    background-color: #900;
+}
+
+/* Estilos adicionales para la sección de inicio */
+section#inicio {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: url('https://www.gratistodo.com/wp-content/uploads/2016/11/navidad-fondos-10.jpg') center/cover fixed;
+}
+
+section#inicio:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.gratistodo.com/wp-content/uploads/2016/11/navidad-fondos-10.jpg') center/cover fixed;
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+section#inicio .cuadro-imagen {
+    margin-top: 2000px;
+    position: relative;
+    z-index: 1;
+}
+
+section#inicio .cuadro-imagen img {
+    width: 200px;
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 2;
+}
+
+section#inicio .cuadro-imagen p {
+    margin-top: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+section#inicio:hover .cuadro-imagen p {
+    color: #fff;
+    display: none; /* Ocultamos el texto cuando se desenfoque */
+}
+/* ... Estilos para otras secciones según sea necesario ... */
